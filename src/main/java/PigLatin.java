@@ -17,6 +17,14 @@ public class PigLatin {
      * @return the pig latin form of in.
      */
     public String returnPigLatin(String in){
-        return "";
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i < in.length(); i++){
+            result.append(in.charAt(i));
+            if (i>=in.length()-1){
+                result.append(in.charAt(0));
+                result.append("ay");
+            }
+    }
+        return result.toString();
     }
 }
